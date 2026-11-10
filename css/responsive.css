@@ -1,0 +1,89 @@
+/* ===== responsive.css: адаптивные правила поверх style.css (подключается ПОСЛЕ него) =====
+   Подход Mobile First: везде min-width, расширяем мобильную версию.
+   Точки останова в em (1em = 16px): 30em = 480px, 40em = 640px, 48em = 768px, 64em = 1024px, 80em = 1280px. */
+
+/* ---------- от 480px: крупные телефоны ---------- */
+@media (min-width: 30em) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn-row { flex-direction: row; flex-wrap: wrap; }
+  .filters-toggle { width: auto; }
+  .live { left: auto; max-width: 24rem; }
+}
+
+/* ---------- от 640px: таблица превращается из карточек в обычную ---------- */
+@media (min-width: 40em) {
+  h1 { font-size: 2.1rem; }
+  .hero h1 { font-size: 2.4rem; }
+  .data-table { display: table; min-width: 40rem; }
+  .data-table thead { position: static; width: auto; height: auto; overflow: visible; clip: auto; display: table-header-group; }
+  .data-table tbody { display: table-row-group; }
+  .data-table tr { display: table-row; border: 0; margin: 0; border-radius: 0; background: transparent; }
+  .data-table th, .data-table td { display: table-cell; padding: 0.7rem 0.9rem; border: 1px solid var(--line); text-align: left; }
+  .data-table th { background: #e9edf5; color: var(--navy); }
+  .data-table td { background: var(--surface); }
+  .data-table td::before { content: none; }
+  .data-table caption { display: table-caption; }
+}
+
+/* ---------- от 768px: планшет ---------- */
+@media (min-width: 48em) {
+  .section { padding-block: 3rem; }
+  .container { padding-inline: 1.5rem; }
+  /* навигация: кнопка-бургер исчезает, меню в одну строку (Flexbox) */
+  .nav-toggle { display: none; }
+  .site-nav { display: flex; align-items: center; gap: 1.25rem; flex-basis: auto; padding-bottom: 0; }
+  .site-nav ul { flex-direction: row; gap: 0.25rem; margin: 0; }
+  .site-nav a:not(.btn) { border-bottom: 0; padding-inline: 0.75rem; border-radius: 0.4rem; }
+  .site-nav .btn { width: auto; }
+  .features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .btn-row--inline { flex-direction: row; }
+  .product { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 2rem; }
+  .product__buy { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  /* форма: две колонки (Grid) */
+  .form { padding: 1.5rem; }
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; }
+  .field--full { grid-column: 1 / -1; }
+  .order-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .contacts { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 2rem; align-items: start; }
+  .footer__inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+  .footer__nav ul { justify-content: flex-end; }
+}
+
+/* ---------- от 1024px: небольшой desktop ---------- */
+@media (min-width: 64em) {
+  .hero { padding-block: 3.5rem; }
+  .hero__inner { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: center; gap: 3rem; }
+  .cards--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* каталог: боковой фильтр слева, карточки справа */
+  .catalog { grid-template-columns: 16rem minmax(0, 1fr); gap: 2rem; align-items: start; }
+  .filters-toggle { display: none; }
+  .filters { display: block; position: sticky; top: 5.5rem; }
+  .catalog__main { min-width: 0; }
+  .order-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: start; }
+  .site-nav { gap: 1.75rem; }
+}
+
+/* ---------- от 1280px: широкий desktop ---------- */
+@media (min-width: 80em) {
+  .container { max-width: 80rem; }
+  .cards--catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  h1 { font-size: 2.4rem; }
+  .hero h1 { font-size: 2.9rem; }
+}
+
+/* ---------- сенсорные экраны: цели нажатия покрупнее ---------- */
+@media (pointer: coarse) {
+  .btn--small { min-height: 2.75rem; }
+  .faq summary { padding-block: 1rem; }
+}
+
+/* ---------- уважение к настройке "уменьшить движение" ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+/* ---------- печать ---------- */
+@media print {
+  .site-header, .site-footer, .nav-toggle, .skip-link, .filters-toggle, .live { display: none !important; }
+  body { background: #fff; }
+}
