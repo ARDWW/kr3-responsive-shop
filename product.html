@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Страница товара: описание, характеристики и сравнение игр.">
+  <title>Товар - Ход конём</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Ход конём</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html" aria-current="page">Товар</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button type="button" class="btn btn--primary" data-open-dialog>Задать вопрос</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li aria-current="page" id="bcName">Каркассон</li></ol></nav>
+</div>
+<div class="section container">
+  <div class="product">
+    <div>
+      <picture>
+        <source id="pWebp" type="image/webp" srcset="images/p1-480.webp 480w, images/p1-640.webp 640w, images/p1-960.webp 960w" sizes="(min-width: 48em) 45vw, 92vw">
+        <img id="pImg" class="product__img" src="images/p1-640.png" srcset="images/p1-480.png 480w, images/p1-640.png 640w, images/p1-960.png 960w" sizes="(min-width: 48em) 45vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Каркассон»">
+      </picture>
+    </div>
+    <div>
+      <div class="badges" id="pBadges"><span class="badge badge--hit">Хит</span><span class="badge">Семейные</span></div>
+      <h1 id="pTitle">Каркассон</h1>
+      <p id="pShort">Выкладываем плитки и строим средневековый город.</p>
+      <p class="price price--lg" id="pPrice">2 490 ₽</p>
+      <div class="product__buy">
+        <button type="button" class="btn btn--primary" id="pAdd" data-add data-title="Каркассон">В корзину</button>
+        <a class="btn btn--outline" id="pOrder" href="order.html?product=1">Оставить заявку</a>
+      </div>
+      <p class="note"><strong>В наличии.</strong> Отправим сегодня, если заказ оформлен до 16:00.</p>
+    </div>
+  </div>
+
+  <h2 class="table-title">Описание</h2>
+  <p id="pDesc" style="max-width:70ch">Классика о строительстве карты: каждый ход вы берёте плитку и достраиваете дороги, города и монастыри, а потом ставите подданного, чтобы получить очки. Правила объясняются за пять минут, а партии хватает на вечер.</p>
+
+  <h2 class="table-title">Характеристики</h2>
+  <div class="table-wrapper">
+    <table class="spec-table">
+      <caption class="visually-hidden">Характеристики игры</caption>
+      <tbody id="pSpecs">
+        <tr><th scope="row">Категория</th><td>Семейные</td></tr>
+        <tr><th scope="row">Игроков</th><td>2-5</td></tr>
+        <tr><th scope="row">Время партии</th><td>30-45 мин</td></tr>
+        <tr><th scope="row">Возраст</th><td>7+</td></tr>
+        <tr><th scope="row">Цена</th><td>2 490 ₽</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="table-title">Сравнение игр</h2>
+  <p>На телефоне каждая игра показана отдельной карточкой, на широком экране это обычная таблица.</p>
+  <div class="table-wrapper">
+    <table class="data-table" role="table">
+      <caption class="visually-hidden">Сравнение игр по основным параметрам</caption>
+      <thead role="rowgroup">
+        <tr role="row">
+          <th role="columnheader" scope="col">Игра</th><th role="columnheader" scope="col">Категория</th><th role="columnheader" scope="col">Игроков</th>
+          <th role="columnheader" scope="col">Время партии</th><th role="columnheader" scope="col">Возраст</th><th role="columnheader" scope="col">Цена</th>
+        </tr>
+      </thead>
+      <tbody role="rowgroup">
+          <tr role="row">
+            <td role="cell" data-label="Игра"><a href="product.html?id=1">Каркассон</a></td>
+            <td role="cell" data-label="Категория">Семейные</td>
+            <td role="cell" data-label="Игроков">2-5</td>
+            <td role="cell" data-label="Время партии">30-45 мин</td>
+            <td role="cell" data-label="Возраст">7+</td>
+            <td role="cell" data-label="Цена">2 490 ₽</td>
+          </tr>
+          <tr role="row">
+            <td role="cell" data-label="Игра"><a href="product.html?id=2">Катан</a></td>
+            <td role="cell" data-label="Категория">Стратегии</td>
+            <td role="cell" data-label="Игроков">3-4</td>
+            <td role="cell" data-label="Время партии">60-120 мин</td>
+            <td role="cell" data-label="Возраст">10+</td>
+            <td role="cell" data-label="Цена">3 590 ₽</td>
+          </tr>
+          <tr role="row">
+            <td role="cell" data-label="Игра"><a href="product.html?id=3">Диксит</a></td>
+            <td role="cell" data-label="Категория">Вечеринка</td>
+            <td role="cell" data-label="Игроков">3-8</td>
+            <td role="cell" data-label="Время партии">30 мин</td>
+            <td role="cell" data-label="Возраст">8+</td>
+            <td role="cell" data-label="Цена">2 790 ₽</td>
+          </tr>
+          <tr role="row">
+            <td role="cell" data-label="Игра"><a href="product.html?id=4">Манчкин</a></td>
+            <td role="cell" data-label="Категория">Вечеринка</td>
+            <td role="cell" data-label="Игроков">3-6</td>
+            <td role="cell" data-label="Время партии">60 мин</td>
+            <td role="cell" data-label="Возраст">12+</td>
+            <td role="cell" data-label="Цена">1 490 ₽</td>
+          </tr>
+          <tr role="row">
+            <td role="cell" data-label="Игра"><a href="product.html?id=5">Кодовые имена</a></td>
+            <td role="cell" data-label="Категория">Вечеринка</td>
+            <td role="cell" data-label="Игроков">4-8</td>
+            <td role="cell" data-label="Время партии">15 мин</td>
+            <td role="cell" data-label="Возраст">10+</td>
+            <td role="cell" data-label="Цена">1 690 ₽</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<dialog id="askDialog" class="dialog" aria-labelledby="askTitle">
+  <div class="dialog__head">
+    <h2 id="askTitle">Задать вопрос продавцу</h2>
+    <button type="button" class="btn btn--outline dialog__close" data-close-dialog aria-label="Закрыть окно">✕</button>
+  </div>
+  <form id="askForm" class="dialog__body">
+    <p id="askStatus" class="status" role="status" hidden></p>
+    <div class="field">
+      <label for="askName">Имя <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="askName" name="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="askEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="askEmail" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="askText">Вопрос <span class="req" aria-hidden="true">*</span></label>
+      <textarea id="askText" name="question" rows="3" required></textarea>
+    </div>
+    <div class="btn-row">
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <button type="button" class="btn btn--outline" data-close-dialog>Закрыть</button>
+    </div>
+  </form>
+</dialog>
+<div id="live" class="live" role="status" aria-live="polite" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__brand">Ход конём</p>
+      <p class="footer__text">Магазин настольных игр. Учебный проект, контрольная работа №3.</p>
+      <p class="footer__text">Тел. <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

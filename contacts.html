@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты магазина и форма обратной связи.">
+  <title>Контакты - Ход конём</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Ход конём</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html">Товар</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html" aria-current="page">Контакты</a></li>
+      </ul>
+      <button type="button" class="btn btn--primary" data-open-dialog>Задать вопрос</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li aria-current="page">Контакты</li></ol></nav>
+</div>
+<div class="section container">
+  <h1>Контакты</h1>
+  <div class="contacts">
+    <section aria-labelledby="info-title">
+      <h2 id="info-title">Как нас найти</h2>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>г. Москва, ул. Примерная, д. 1 (учебный адрес)</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79000000000">+7 (900) 000-00-00</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:info@hodkonyom.example">info@hodkonyom.example</a></dd></div>
+        <div><dt>Режим работы</dt><dd>Ежедневно с 10:00 до 20:00</dd></div>
+      </dl>
+    </section>
+    <section aria-labelledby="fb-title">
+      <h2 id="fb-title">Обратная связь</h2>
+      <p id="contactStatus" class="status" role="status" tabindex="-1" hidden></p>
+      <form id="contactForm" class="form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="cName">Имя <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="cName" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="cEmail" name="email" autocomplete="email" required>
+          </div>
+          <div class="field field--full">
+            <label for="cTopic">Тема</label>
+            <select id="cTopic" name="topic">
+              <option>Вопрос по заказу</option>
+              <option>Подбор игры</option>
+              <option>Сотрудничество</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="cMsg">Сообщение <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="cMsg" name="message" rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="btn-row"><button type="submit" class="btn btn--primary">Отправить</button></div>
+      </form>
+    </section>
+  </div>
+</div>
+
+<dialog id="askDialog" class="dialog" aria-labelledby="askTitle">
+  <div class="dialog__head">
+    <h2 id="askTitle">Задать вопрос продавцу</h2>
+    <button type="button" class="btn btn--outline dialog__close" data-close-dialog aria-label="Закрыть окно">✕</button>
+  </div>
+  <form id="askForm" class="dialog__body">
+    <p id="askStatus" class="status" role="status" hidden></p>
+    <div class="field">
+      <label for="askName">Имя <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="askName" name="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="askEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="askEmail" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="askText">Вопрос <span class="req" aria-hidden="true">*</span></label>
+      <textarea id="askText" name="question" rows="3" required></textarea>
+    </div>
+    <div class="btn-row">
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <button type="button" class="btn btn--outline" data-close-dialog>Закрыть</button>
+    </div>
+  </form>
+</dialog>
+<div id="live" class="live" role="status" aria-live="polite" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__brand">Ход конём</p>
+      <p class="footer__text">Магазин настольных игр. Учебный проект, контрольная работа №3.</p>
+      <p class="footer__text">Тел. <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

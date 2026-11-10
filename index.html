@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Магазин настольных игр: семейные, стратегии, вечеринки и классика.">
+  <title>Ход конём - магазин настольных игр</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Ход конём</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html" aria-current="page">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html">Товар</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button type="button" class="btn btn--primary" data-open-dialog>Задать вопрос</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__inner">
+    <div>
+      <h1 id="hero-title">Игры, после которых хочется сыграть ещё раз</h1>
+      <p class="hero__lead">Подбираем настольные игры для семьи, компании и турниров. Объясним правила, поможем выбрать и привезём за два дня.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="catalog.html">Смотреть каталог</a>
+        <button type="button" class="btn btn--light" data-open-dialog>Помочь выбрать</button>
+      </div>
+    </div>
+    <div class="hero__media">
+      <!-- picture: на планшете (768-1023px) показывается широкий баннер, в остальных случаях квадратнее -->
+      <picture>
+        <source media="(min-width: 48em) and (max-width: 63.99em)" type="image/webp" srcset="images/hero-wide-960.webp 960w, images/hero-wide-1600.webp 1600w" sizes="100vw">
+        <source media="(min-width: 48em) and (max-width: 63.99em)" srcset="images/hero-wide-960.png 960w, images/hero-wide-1600.png 1600w" sizes="100vw">
+        <source type="image/webp" srcset="images/hero-narrow-480.webp 480w, images/hero-narrow-800.webp 800w" sizes="(min-width: 64em) 45vw, 92vw">
+        <img src="images/hero-narrow-800.png" srcset="images/hero-narrow-480.png 480w, images/hero-narrow-800.png 800w" sizes="(min-width: 64em) 45vw, 92vw" width="800" height="600" alt="" decoding="async">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section container" aria-labelledby="why-title">
+  <h2 id="why-title">Почему у нас</h2>
+  <ul class="features">
+    <li class="feature"><h3>Проверено на практике</h3><p>Мы сами играем во всё, что продаём, и честно говорим, кому какая игра подойдёт.</p></li>
+    <li class="feature"><h3>Быстрая доставка</h3><p>Отправляем в день заказа, по городу привозим курьером за один-два дня.</p></li>
+    <li class="feature"><h3>Обмен и возврат</h3><p>Если коробка вскрыта, но игра не подошла, обменяем в течение 14 дней.</p></li>
+  </ul>
+</section>
+
+<section class="section container" aria-labelledby="pop-title">
+  <div class="section__head">
+    <h2 id="pop-title">Популярные игры</h2>
+    <a class="btn btn--outline btn--small" href="catalog.html">Весь каталог</a>
+  </div>
+  <ul class="cards cards--4">
+      <li class="card" data-id="1" data-cat="Семейные" data-price="2490">
+        <a href="product.html?id=1" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p1-480.webp 480w, images/p1-640.webp 640w, images/p1-960.webp 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p1-640.png" srcset="images/p1-480.png 480w, images/p1-640.png 640w, images/p1-960.png 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Каркассон»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=1">Каркассон</a></h3>
+          <p class="card__text">Выкладываем плитки и строим средневековый город.</p>
+          <p class="card__meta">2-5 игроков · 30-45 мин · 7+</p>
+          <div class="card__footer">
+            <span class="price">2 490 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Каркассон">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="2" data-cat="Стратегии" data-price="3590">
+        <a href="product.html?id=2" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p2-480.webp 480w, images/p2-640.webp 640w, images/p2-960.webp 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p2-640.png" srcset="images/p2-480.png 480w, images/p2-640.png 640w, images/p2-960.png 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Катан»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Стратегии</span></div>
+          <h3 class="card__title"><a href="product.html?id=2">Катан</a></h3>
+          <p class="card__text">Торговля ресурсами и строительство на острове.</p>
+          <p class="card__meta">3-4 игроков · 60-120 мин · 10+</p>
+          <div class="card__footer">
+            <span class="price">3 590 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Катан">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="7" data-cat="Семейные" data-price="1390">
+        <a href="product.html?id=7" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p7-480.webp 480w, images/p7-640.webp 640w, images/p7-960.webp 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p7-640.png" srcset="images/p7-480.png 480w, images/p7-640.png 640w, images/p7-960.png 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Взрывные котята»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=7">Взрывные котята</a></h3>
+          <p class="card__text">Быстрая карточная игра, где главное не взорваться.</p>
+          <p class="card__meta">2-5 игроков · 15 мин · 7+</p>
+          <div class="card__footer">
+            <span class="price">1 390 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Взрывные котята">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="6" data-cat="Семейные" data-price="2990">
+        <a href="product.html?id=6" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p6-480.webp 480w, images/p6-640.webp 640w, images/p6-960.webp 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p6-640.png" srcset="images/p6-480.png 480w, images/p6-640.png 640w, images/p6-960.png 960w" sizes="(min-width: 64em) 22vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Азул»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--new">Новинка</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=6">Азул</a></h3>
+          <p class="card__text">Красивая абстрактная игра с плитками-мозаикой.</p>
+          <p class="card__meta">2-4 игроков · 30-45 мин · 8+</p>
+          <div class="card__footer">
+            <span class="price">2 990 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Азул">В корзину</button>
+          </div>
+        </div>
+      </li>
+  </ul>
+</section>
+
+<section class="section container faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Частые вопросы</h2>
+  <details open><summary>Как оплатить заказ?</summary><p>Картой на сайте или при получении, а также наличными курьеру.</p></details>
+  <details><summary>Сколько идёт доставка?</summary><p>По городу один-два дня, по России от трёх до семи дней в зависимости от региона.</p></details>
+  <details><summary>Можно ли вернуть игру?</summary><p>Да, в течение 14 дней, если сохранены комплектность и товарный вид.</p></details>
+</section>
+
+<dialog id="askDialog" class="dialog" aria-labelledby="askTitle">
+  <div class="dialog__head">
+    <h2 id="askTitle">Задать вопрос продавцу</h2>
+    <button type="button" class="btn btn--outline dialog__close" data-close-dialog aria-label="Закрыть окно">✕</button>
+  </div>
+  <form id="askForm" class="dialog__body">
+    <p id="askStatus" class="status" role="status" hidden></p>
+    <div class="field">
+      <label for="askName">Имя <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="askName" name="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="askEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="askEmail" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="askText">Вопрос <span class="req" aria-hidden="true">*</span></label>
+      <textarea id="askText" name="question" rows="3" required></textarea>
+    </div>
+    <div class="btn-row">
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <button type="button" class="btn btn--outline" data-close-dialog>Закрыть</button>
+    </div>
+  </form>
+</dialog>
+<div id="live" class="live" role="status" aria-live="polite" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__brand">Ход конём</p>
+      <p class="footer__text">Магазин настольных игр. Учебный проект, контрольная работа №3.</p>
+      <p class="footer__text">Тел. <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

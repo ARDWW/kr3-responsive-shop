@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Форма заявки на покупку настольной игры.">
+  <title>Заявка - Ход конём</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Ход конём</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="product.html">Товар</a></li>
+        <li><a href="order.html" aria-current="page">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button type="button" class="btn btn--primary" data-open-dialog>Задать вопрос</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li aria-current="page">Заявка</li></ol></nav>
+</div>
+<div class="section container">
+  <h1>Заявка на покупку</h1>
+  <div class="order-layout">
+    <div>
+      <p id="orderStatus" class="status" role="status" tabindex="-1" hidden></p>
+      <form id="orderForm" class="form" aria-label="Форма заявки">
+        <p class="hint" style="margin:0">Поля, отмеченные <span class="req" aria-hidden="true">*</span>, обязательны.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="oName">Имя <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="oName" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="oEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="oEmail" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="oPhone">Телефон <span class="req" aria-hidden="true">*</span></label>
+            <input type="tel" id="oPhone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 900 123-45-67" aria-describedby="oPhoneHint" required>
+            <span class="hint" id="oPhoneHint">Например, +7 900 123-45-67</span>
+          </div>
+          <div class="field">
+            <label for="oProduct">Игра <span class="req" aria-hidden="true">*</span></label>
+            <select id="oProduct" name="product" required>
+              <option value="">Выберите игру</option>
+              <option value="1">Каркассон (2 490 ₽)</option><option value="2">Катан (3 590 ₽)</option><option value="3">Диксит (2 790 ₽)</option><option value="4">Манчкин (1 490 ₽)</option><option value="5">Кодовые имена (1 690 ₽)</option><option value="6">Азул (2 990 ₽)</option><option value="7">Взрывные котята (1 390 ₽)</option><option value="8">Шахматы деревянные (4 900 ₽)</option>
+              <option value="other">Другое (подберите мне игру)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="oQty">Количество</label>
+            <input type="number" id="oQty" name="qty" value="1" min="1" max="10" inputmode="numeric">
+          </div>
+          <fieldset class="field">
+            <legend>Получение</legend>
+            <label class="check"><input type="radio" name="delivery" value="pickup" checked> Самовывоз</label>
+            <label class="check"><input type="radio" name="delivery" value="courier"> Курьер</label>
+          </fieldset>
+          <div class="field field--full">
+            <label for="oComment">Комментарий</label>
+            <textarea id="oComment" name="comment" rows="4"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" name="agree" required> <span>Согласен на обработку персональных данных <span class="req" aria-hidden="true">*</span></span></label>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn btn--primary">Отправить заявку</button>
+          <button type="reset" class="btn btn--outline">Очистить</button>
+        </div>
+      </form>
+    </div>
+    <aside class="aside-box" aria-labelledby="next-title">
+      <h2 id="next-title">Что дальше</h2>
+      <ol><li>Мы получим заявку.</li><li>Менеджер позвонит в течение часа.</li><li>Подтвердим наличие и сроки.</li></ol>
+    </aside>
+  </div>
+</div>
+
+<dialog id="askDialog" class="dialog" aria-labelledby="askTitle">
+  <div class="dialog__head">
+    <h2 id="askTitle">Задать вопрос продавцу</h2>
+    <button type="button" class="btn btn--outline dialog__close" data-close-dialog aria-label="Закрыть окно">✕</button>
+  </div>
+  <form id="askForm" class="dialog__body">
+    <p id="askStatus" class="status" role="status" hidden></p>
+    <div class="field">
+      <label for="askName">Имя <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="askName" name="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="askEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="askEmail" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="askText">Вопрос <span class="req" aria-hidden="true">*</span></label>
+      <textarea id="askText" name="question" rows="3" required></textarea>
+    </div>
+    <div class="btn-row">
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <button type="button" class="btn btn--outline" data-close-dialog>Закрыть</button>
+    </div>
+  </form>
+</dialog>
+<div id="live" class="live" role="status" aria-live="polite" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__brand">Ход конём</p>
+      <p class="footer__text">Магазин настольных игр. Учебный проект, контрольная работа №3.</p>
+      <p class="footer__text">Тел. <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

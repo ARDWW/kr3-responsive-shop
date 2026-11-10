@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог настольных игр с фильтром по категории и цене.">
+  <title>Каталог - Ход конём</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">Ход конём</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" aria-current="page">Каталог</a></li>
+        <li><a href="product.html">Товар</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <button type="button" class="btn btn--primary" data-open-dialog>Задать вопрос</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="container">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки"><ol><li><a href="index.html">Главная</a></li><li aria-current="page">Каталог</li></ol></nav>
+</div>
+<div class="section container">
+  <h1>Каталог игр</h1>
+  <div class="catalog">
+    <aside aria-label="Фильтры каталога">
+      <button type="button" class="btn btn--outline filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filters">Фильтры и сортировка</button>
+      <form id="filters" class="filters">
+        <fieldset>
+          <legend>Категория</legend>
+          <label class="check"><input type="checkbox" name="cat" value="Семейные"> Семейные</label>
+          <label class="check"><input type="checkbox" name="cat" value="Стратегии"> Стратегии</label>
+          <label class="check"><input type="checkbox" name="cat" value="Вечеринка"> Вечеринка</label>
+          <label class="check"><input type="checkbox" name="cat" value="Классика"> Классика</label>
+        </fieldset>
+        <fieldset>
+          <legend>Цена</legend>
+          <label for="fMax">Не дороже: <output id="fMaxOut" for="fMax">5000 ₽</output></label>
+          <input type="range" id="fMax" name="max" min="1000" max="5000" step="100" value="5000">
+        </fieldset>
+        <div class="field">
+          <label for="fSort">Сортировка</label>
+          <select id="fSort" name="sort">
+            <option value="def">По умолчанию</option>
+            <option value="asc">Сначала дешёвые</option>
+            <option value="desc">Сначала дорогие</option>
+          </select>
+        </div>
+        <button type="reset" class="btn btn--outline" style="margin-top:1rem;width:100%">Сбросить</button>
+      </form>
+    </aside>
+    <div class="catalog__main">
+      <h2 class="visually-hidden">Список игр</h2>
+      <p class="catalog__count" id="count" role="status">Найдено игр: 8</p>
+      <p class="empty" id="empty" role="status" hidden>По вашему запросу ничего не нашлось. Попробуйте изменить фильтры.</p>
+      <ul class="cards cards--catalog" id="cardList">
+      <li class="card" data-id="1" data-cat="Семейные" data-price="2490">
+        <a href="product.html?id=1" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p1-480.webp 480w, images/p1-640.webp 640w, images/p1-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p1-640.png" srcset="images/p1-480.png 480w, images/p1-640.png 640w, images/p1-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Каркассон»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=1">Каркассон</a></h3>
+          <p class="card__text">Выкладываем плитки и строим средневековый город.</p>
+          <p class="card__meta">2-5 игроков · 30-45 мин · 7+</p>
+          <div class="card__footer">
+            <span class="price">2 490 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Каркассон">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="2" data-cat="Стратегии" data-price="3590">
+        <a href="product.html?id=2" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p2-480.webp 480w, images/p2-640.webp 640w, images/p2-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p2-640.png" srcset="images/p2-480.png 480w, images/p2-640.png 640w, images/p2-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Катан»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Стратегии</span></div>
+          <h3 class="card__title"><a href="product.html?id=2">Катан</a></h3>
+          <p class="card__text">Торговля ресурсами и строительство на острове.</p>
+          <p class="card__meta">3-4 игроков · 60-120 мин · 10+</p>
+          <div class="card__footer">
+            <span class="price">3 590 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Катан">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="3" data-cat="Вечеринка" data-price="2790">
+        <a href="product.html?id=3" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p3-480.webp 480w, images/p3-640.webp 640w, images/p3-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p3-640.png" srcset="images/p3-480.png 480w, images/p3-640.png 640w, images/p3-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Диксит»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--new">Новинка</span><span class="badge">Вечеринка</span></div>
+          <h3 class="card__title"><a href="product.html?id=3">Диксит</a></h3>
+          <p class="card__text">Угадываем карты по ассоциациям рассказчика.</p>
+          <p class="card__meta">3-8 игроков · 30 мин · 8+</p>
+          <div class="card__footer">
+            <span class="price">2 790 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Диксит">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="4" data-cat="Вечеринка" data-price="1490">
+        <a href="product.html?id=4" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p4-480.webp 480w, images/p4-640.webp 640w, images/p4-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p4-640.png" srcset="images/p4-480.png 480w, images/p4-640.png 640w, images/p4-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Манчкин»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--sale">Скидка</span><span class="badge">Вечеринка</span></div>
+          <h3 class="card__title"><a href="product.html?id=4">Манчкин</a></h3>
+          <p class="card__text">Карточная пародия на подземелья и драконов.</p>
+          <p class="card__meta">3-6 игроков · 60 мин · 12+</p>
+          <div class="card__footer">
+            <span class="price">1 490 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Манчкин">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="5" data-cat="Вечеринка" data-price="1690">
+        <a href="product.html?id=5" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p5-480.webp 480w, images/p5-640.webp 640w, images/p5-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p5-640.png" srcset="images/p5-480.png 480w, images/p5-640.png 640w, images/p5-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Кодовые имена»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge">Вечеринка</span></div>
+          <h3 class="card__title"><a href="product.html?id=5">Кодовые имена</a></h3>
+          <p class="card__text">Командная игра на слова и догадки.</p>
+          <p class="card__meta">4-8 игроков · 15 мин · 10+</p>
+          <div class="card__footer">
+            <span class="price">1 690 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Кодовые имена">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="6" data-cat="Семейные" data-price="2990">
+        <a href="product.html?id=6" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p6-480.webp 480w, images/p6-640.webp 640w, images/p6-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p6-640.png" srcset="images/p6-480.png 480w, images/p6-640.png 640w, images/p6-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Азул»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--new">Новинка</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=6">Азул</a></h3>
+          <p class="card__text">Красивая абстрактная игра с плитками-мозаикой.</p>
+          <p class="card__meta">2-4 игроков · 30-45 мин · 8+</p>
+          <div class="card__footer">
+            <span class="price">2 990 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Азул">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="7" data-cat="Семейные" data-price="1390">
+        <a href="product.html?id=7" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p7-480.webp 480w, images/p7-640.webp 640w, images/p7-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p7-640.png" srcset="images/p7-480.png 480w, images/p7-640.png 640w, images/p7-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Взрывные котята»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge badge--hit">Хит</span><span class="badge">Семейные</span></div>
+          <h3 class="card__title"><a href="product.html?id=7">Взрывные котята</a></h3>
+          <p class="card__text">Быстрая карточная игра, где главное не взорваться.</p>
+          <p class="card__meta">2-5 игроков · 15 мин · 7+</p>
+          <div class="card__footer">
+            <span class="price">1 390 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Взрывные котята">В корзину</button>
+          </div>
+        </div>
+      </li>
+      <li class="card" data-id="8" data-cat="Классика" data-price="4900">
+        <a href="product.html?id=8" tabindex="-1" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcset="images/p8-480.webp 480w, images/p8-640.webp 640w, images/p8-960.webp 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw">
+            <img class="card__img" src="images/p8-640.png" srcset="images/p8-480.png 480w, images/p8-640.png 640w, images/p8-960.png 960w" sizes="(min-width: 80em) 300px, (min-width: 64em) 30vw, (min-width: 30em) 46vw, 92vw" width="640" height="427" alt="Коробка настольной игры «Шахматы деревянные»" loading="lazy" decoding="async">
+          </picture>
+        </a>
+        <div class="card__body">
+          <div class="badges"><span class="badge">Классика</span></div>
+          <h3 class="card__title"><a href="product.html?id=8">Шахматы деревянные</a></h3>
+          <p class="card__text">Складная доска и фигуры из дерева.</p>
+          <p class="card__meta">2 игроков · 30-90 мин · 6+</p>
+          <div class="card__footer">
+            <span class="price">4 900 ₽</span>
+            <button type="button" class="btn btn--primary btn--small" data-add data-title="Шахматы деревянные">В корзину</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<dialog id="askDialog" class="dialog" aria-labelledby="askTitle">
+  <div class="dialog__head">
+    <h2 id="askTitle">Задать вопрос продавцу</h2>
+    <button type="button" class="btn btn--outline dialog__close" data-close-dialog aria-label="Закрыть окно">✕</button>
+  </div>
+  <form id="askForm" class="dialog__body">
+    <p id="askStatus" class="status" role="status" hidden></p>
+    <div class="field">
+      <label for="askName">Имя <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="askName" name="name" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="askEmail">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="askEmail" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="askText">Вопрос <span class="req" aria-hidden="true">*</span></label>
+      <textarea id="askText" name="question" rows="3" required></textarea>
+    </div>
+    <div class="btn-row">
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <button type="button" class="btn btn--outline" data-close-dialog>Закрыть</button>
+    </div>
+  </form>
+</dialog>
+<div id="live" class="live" role="status" aria-live="polite" hidden></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__brand">Ход конём</p>
+      <p class="footer__text">Магазин настольных игр. Учебный проект, контрольная работа №3.</p>
+      <p class="footer__text">Тел. <a href="tel:+79000000000">+7 (900) 000-00-00</a></p>
+    </div>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <ul>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заявка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
